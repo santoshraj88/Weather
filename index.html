@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get real-time weather information for any city">
+    <title>Weather App - Real-time Weather Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Weather App</h1>
+        
+        <div class="controls">
+            <button class="location-btn" onclick="getLocationWeather()" aria-label="Get current location weather">
+                📍 Use My Location
+            </button>
+            <div class="unit-toggle">
+                <button class="unit-btn active" data-unit="metric" onclick="toggleUnit('metric')">°C</button>
+                <button class="unit-btn" data-unit="imperial" onclick="toggleUnit('imperial')">°F</button>
+            </div>
+        </div>
+
+        <form class="search-box" onsubmit="event.preventDefault(); getWeather();">
+            <input 
+                type="text" 
+                id="city" 
+                placeholder="Enter city name" 
+                aria-label="City name"
+                autocomplete="off"
+                required
+            >
+            <button type="submit" aria-label="Search weather">
+                <span class="btn-text">Search</span>
+                <span class="loading" aria-hidden="true">●</span>
+            </button>
+        </form>
+        
+        <div id="weather-result" role="region" aria-live="polite"></div>
+        <div id="forecast-result"></div>
+        
+        <div class="recent-searches" id="recent-searches"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
