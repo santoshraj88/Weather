@@ -29,8 +29,8 @@ A modern, feature-rich weather application that provides real-time weather infor
 
 1. **Clone or download** this repository:
    ```bash
-   git clone https://github.com/yourusername/weather-app.git
-   cd weather-app
+   git clone https://github.com/santoshraj88/Weather.git
+   cd Weather
    ```
 
 2. **Get your API key**:
@@ -201,7 +201,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
-Your Name - [@yourhandle](https://twitter.com/yourhandle)
+Santosh Raj - [@santoshraj88](https://github.com/santoshraj88)
 
 ## 🙏 Acknowledgments
 
@@ -213,8 +213,7 @@ Your Name - [@yourhandle](https://twitter.com/yourhandle)
 
 If you have any questions or issues:
 - Open an issue on GitHub
-- Email: your.email@example.com
-- Twitter: [@yourhandle](https://twitter.com/yourhandle)
+- GitHub: [@santoshraj88](https://github.com/santoshraj88)
 
 ---
 
