@@ -238,7 +238,9 @@ function displayWeather(data) {
     const weatherIcon = getWeatherIcon(data.weather[0].id);
     const condition = capitalizeWords(data.weather[0].description);
     const unit = state.currentUnits === "metric" ? "°C" : "°F";
-    const windUnit = state.currentUnits === "metric" ? "m/s" : "mph";
+    
+    // Convert wind speed to km/h
+    const windSpeedKmh = (data.wind.speed * 3.6).toFixed(1);
     
     // Get sunrise and sunset
     const sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString('en-US', { 
@@ -267,7 +269,7 @@ function displayWeather(data) {
                 </div>
                 <div class="detail-item">
                     <span class="detail-label">Wind Speed</span>
-                    <span class="detail-value">${data.wind.speed} ${windUnit}</span>
+                    <span class="detail-value">${windSpeedKmh} km/h</span>
                 </div>
                 <div class="detail-item">
                     <span class="detail-label">Pressure</span>
